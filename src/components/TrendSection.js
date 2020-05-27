@@ -21,10 +21,10 @@ const TrendSection = ({ info, title, link, media }) => {
     <>
       <TrendSectionStyled>
         <div className="title">
-          <h3>{title}</h3>
+          <h2>{title}</h2>
           <Link
             className="link"
-            to={link}>-->
+            to={link}>→
           </Link>
         </div>
         <CardSection

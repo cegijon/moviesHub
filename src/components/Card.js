@@ -31,11 +31,11 @@ margin: 5px 0;
 }
 `
 
-const Card = ({ img, titlemedia, id, media }) => {
+const Card = ({ img, titlemedia, id, media, info }) => {
   return (
     <>
     <CardStyled>
-        <Link className="link" to ={`/${media}/${id}`}>
+        <Link className="link" to ={`/${media}/${id}/info`}>
         <div className="img-div">
             <img src={img} />
         </div>

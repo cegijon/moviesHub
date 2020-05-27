@@ -1,22 +1,22 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Card from './Card'
 
 const CardSectionStyled = styled.section`
-width: 100%;
+justify-content: space-around;
 display: flex;
 flex-wrap: wrap;
-justify-content: space-around;
+width: 100%;
 background-color: #141414;
-h3 {
-    display:block;
+h2 {
+  display: block;
 }
 `
 
 const CardSection = ({ info, cardnumber, titleall, media }) => {
   return (
     <>
-      <h3>{titleall}</h3>
+      <h2>{titleall}</h2>
       <CardSectionStyled>
         {info &&
           info.map((element, i) => {

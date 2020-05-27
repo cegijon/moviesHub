@@ -12,19 +12,16 @@ const Series = () => {
   return (
     <>
       {popularSeries &&
-        <TrendSection link={"Series/category/popular"} title={"Popular Tv Shows"} info={popularSeries.results} media={"Series"} />
+        <TrendSection link={"tv/popular/page/1"} title={"Popular Tv Shows"} info={popularSeries.results} media={"Series"} />
       }
-
       {topRatedSeries &&
-        <TrendSection link={"Series/category/top_rated"} title={"Top Rated Tv Shows"} info={topRatedSeries.results} media={"Series"} />
+        <TrendSection link={"tv/top_rated/page/1"} title={"Top Rated Tv Shows"} info={topRatedSeries.results} media={"Series"} />
       }
-
       {currentlyAiringSeries &&
-        <TrendSection link={"Series/category/on_the_air"} title={"Currently Airing Tv Shows"} info={currentlyAiringSeries.results} media={"Series"} />
+        <TrendSection link={"tv/on_the_air/page/1"} title={"Currently Airing Tv Shows"} info={currentlyAiringSeries.results} media={"Series"} />
       }
-
       {seriesAiringToday &&
-        <TrendSection link={"Series/category/airing_today"} title={"Airing Today Tv Shows"} info={seriesAiringToday.results} media={"Series"} />
+        <TrendSection link={"tv/airing_today/page/1"} title={"Airing Today Tv Shows"} info={seriesAiringToday.results} media={"Series"} />
       }
     </>
   )

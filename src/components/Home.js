@@ -9,10 +9,10 @@ const Home = () => {
   return (
     <>
       {moviesOnTrend &&
-        <TrendSection link={"movie/category/trending"} title={"Movies on Trend"} info={moviesOnTrend.results} media={"movie"} />
+        <TrendSection link={"movie/trending/page/1"} title={"Movies on Trend"} info={moviesOnTrend.results} media={"movie"} />
       }
       {seriesOnTrend &&
-        <TrendSection link={"tv/category/trending"} title={"Tv Shows on Trend"} info={seriesOnTrend.results} media={"tv"} />
+        <TrendSection link={"tv/trending/page/1"} title={"Tv Shows on Trend"} info={seriesOnTrend.results} media={"tv"} />
       }
     </>
   )
