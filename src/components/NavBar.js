@@ -24,18 +24,18 @@ background-color: #23272a;
   flex-direction: row;
   justify-content: space-between;
 }
-.search-sector {
-    width: 300px;
-    margin-left: 30px;
-    form {
-      width: 300px;
-      height: 100%;
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+// .search-sector {
+//     width: 300px;
+//     margin-left: 30px;
+//     form {
+//       width: 300px;
+//       height: 100%;
+//       display: flex;
+//       flex-direction: row;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
 `;
 
 export const SearchIcon = styled(Search)`
@@ -56,20 +56,22 @@ border: none;
 `;
 
 const NavBar = () => {
+
   return (
     <NavBarStyled>
-       <div className='menu-icons'>
-      <Link className='home' to='/'><Home /></Link>
-      <Link className='movies' to='/movies'><Video /></Link>
-      <Link className='tv' to='/tv'><Tv /></Link>
+      <div className='menu-icons'>
+        <Link className='home' to='/'><Home /></Link>
+        <Link className='movies' to='/movies'><Video /></Link>
+        <Link className='tv' to='/tv'><Tv /></Link>
       </div>
       <div classname='search-sector'>
         <form>
-      <Link className='search' to="/"><SearchIcon /><InputSearch 
-        type="text"
-        placeholder="Search"></InputSearch>
-      </Link>
-      </form></div>
+          <Link className='search' to="/"><SearchIcon /><InputSearch
+            type="text"
+            placeholder="Search">
+          </InputSearch>
+          </Link>
+        </form></div>
     </NavBarStyled>
   )
 }

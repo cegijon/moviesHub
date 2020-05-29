@@ -42,19 +42,16 @@ const ShowAll = () => {
       break;
   }
 
-  console.log(params);
-  console.log(data);
-
   return (
-    <>{data &&
-      <CardSection
-        info={data.results}
-        titleall={`${titleCategory} ${titleMedia}`}
-        cardnumber={20}
-        media={params.media}
-      ></CardSection>
-    }
-
+    <>
+      {data &&
+        <CardSection
+          info={data.results}
+          titleall={`${titleCategory} ${titleMedia}`}
+          cardnumber={20}
+          media={params.media}
+        ></CardSection>
+      }
     </>
   );
 }

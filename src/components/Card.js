@@ -31,7 +31,7 @@ margin: 5px 0;
 }
 `
 
-const Card = ({ img, titlemedia, id, media, info }) => {
+const Card = ({ img, titlemedia, id, media }) => {
   return (
     <>
     <CardStyled>
