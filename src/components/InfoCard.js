@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const InfoCardStyled = styled.div`
@@ -9,16 +9,15 @@ h2 {
 .container-info {
     display: flex;
     img {
-        width: 20%;
-        heigth: auto;
+        width: 25%;
+        height: auto;
         margin: 20px;
     }
     .info {
-        font-size: 14px;
-        font-weight: 300;
-        width: 50%;
-        margin: 0;
-        h2{
+        font-size: 15px;
+        font-weight: 350;
+        width: 60%;
+        h2 {
             font-size: 32px;
             margin:20px 0;
             font-weight: 300;

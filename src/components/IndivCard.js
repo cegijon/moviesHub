@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link, useParams } from 'react-router-dom';
 import UseFetchFromAPI from '../hooks/UseFetchFromAPI';
 import InfoCard from './InfoCard';
+import CastCard from './CastCard';
 
 const CardDetails = styled.div`
 display: flex;
@@ -28,9 +29,10 @@ button {
 const IndivCard = () => {
   const params = useParams();
   const details = {
-    movie: `https://api.themoviedb.org/3/movie/${[params.id]}?api_key=f15ba837f67c60dc9c2c9154ce892db4&&language=en-US`,
-    tv: `https://api.themoviedb.org/3/tv/${[params.id]}?api_key=f15ba837f67c60dc9c2c9154ce892db4&&language=en-US`
+    movie: `https://api.themoviedb.org/3/movie/${[params.id]}?api_key=f15ba837f67c60dc9c2c9154ce892db4&language=en-US`,
+    tv: `https://api.themoviedb.org/3/tv/${[params.id]}?api_key=f15ba837f67c60dc9c2c9154ce892db4&language=en-US`
   }
+  const credits = UseFetchFromAPI(`https://api.themoviedb.org/3/${[params.media]}/${[params.id]}/credits?api_key=f15ba837f67c60dc9c2c9154ce892db4`)
   const media = [params.media]
   const mediaInformation = UseFetchFromAPI(details[media])
   const [page, setPage] = useState("overview")
@@ -52,7 +54,8 @@ const IndivCard = () => {
       media={media}
       revenue={mediaInformation && mediaInformation.revenue}
       budget={mediaInformation && mediaInformation.budget}
-    />
+    />,
+    cast: <CastCard credits={credits}/>
   }
 
   return (
