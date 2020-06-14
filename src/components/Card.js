@@ -33,6 +33,7 @@ margin: 5px 0;
 
 const Card = ({ img, titlemedia, id, media }) => {
   return (
+    // No es necesario este fragemnto aqui
     <>
     <CardStyled>
         <Link className="link" to ={`/${media}/${id}/info`}>

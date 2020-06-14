@@ -64,8 +64,16 @@ const IndivCard = () => {
         <img src={`https://image.tmdb.org/t/p/w500${mediaInformation && mediaInformation.backdrop_path}`}
           className="background-image"></img>
         {media == "tv" ?
+        // No es necesario el react fragment aqui 
           <>
             <div className="card-buttons">
+            {/* trata de acomodar este codigo para no tener un scroll horizontal: es molesto para quien lo lee
+            la convencion en React es, si son muchos componentes, dejar una nueva linea y tab
+              <Link to={`/${params.media}/${params.id}/overview`}>
+                <button id="overview" onClick={handleClick}>
+                  OVERVIEW
+                </button>
+              </Link> */}
               <Link to={`/${params.media}/${params.id}/overview`} ><button id="overview" onClick={handleClick}>OVERVIEW</button></Link>
               <Link to={`/${params.media}/${params.id}/episodes`}><button id="episodes" onClick={handleClick}>EPISODES</button></Link>
               <Link to={`/${params.media}/${params.id}/cast`}><button id="cast" onClick={handleClick}>CAST</button></Link>
@@ -82,6 +90,7 @@ const IndivCard = () => {
             </div>
           </>}
       </CardDetails>
+      {/* me gusta como resolviste esto! */}
       {informationCard[page]}
     </>
   )

@@ -23,7 +23,9 @@ background-color: #23272a;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+
 }
+${'' /* Para comentar dentro de styled components lo hacemos con /* como yo aca  */}
 // .search-sector {
 //     width: 300px;
 //     margin-left: 30px;

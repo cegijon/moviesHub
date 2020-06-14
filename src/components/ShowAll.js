@@ -16,6 +16,11 @@ const ShowAll = () => {
   const titleMedia = params.media === 'movie' ? "Movies" : "Tv Shows"
 
   let titleCategory = '';
+
+  // Esta bien usado este switch, aunque la ultima convencion en React es usar un objeto para estos casos. 
+  // Podes leer sobre el tema aqui: 
+  // https://ultimatecourses.com/blog/deprecating-the-switch-statement-for-object-literals
+
   switch (params.genres) {
     case "popular":
       titleCategory = 'Popular';

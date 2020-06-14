@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 const useFetchFromAPI = (url) => {
-
+// muy bien este hook
 const [data, setData] = useState();
 
 useEffect(() => {

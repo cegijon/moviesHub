@@ -13,6 +13,9 @@ h2 {
 }
 `
 
+// trata de usar camelCase para las props, como para toda variable en JavaScript: cardNumber, titleAll
+
+// me gusta mucho como resolviste la cantidad de tarjetas con cardnumber!
 const CardSection = ({ info, cardnumber, titleall, media }) => {
   return (
     <>
@@ -22,6 +25,7 @@ const CardSection = ({ info, cardnumber, titleall, media }) => {
           info.map((element, i) => {
             if (i < cardnumber) {
               return (
+                // no es necesario el Fragment (<>) aqui, podes poner la Card sola. 
                 <>
                   <Card
                     media={media}

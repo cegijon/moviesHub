@@ -8,6 +8,9 @@ import { Linkedin } from "@styled-icons/fa-brands/Linkedin";
 import { Github } from "@styled-icons/fa-brands/Github";
 import { Mail } from "@styled-icons/feather/Mail";
 
+// atencion al tabulado, todo el estilo tiene que estar dos espacios despues de la declaracion de la const 
+// No es necesario el export ya que estos estilos no se importan en ningun componente. 
+
 export const FacebookIcon = styled(FacebookSquare)`
 color: #dcddde;
 width: 25px;
@@ -77,6 +80,7 @@ const Footer = () => {
         <p>Designed by Celina Gijon - Information fetched from: https://api.themoviedb.org</p>
       </div>
       <div className='social-media-icons'>
+      {/* Agreguemos aca un <a></a> que rodee a los iconos para que estas redes sean accesibles para los que visitan tu pagina */}
         <FacebookIcon />
         <TwitterIcon />
         <InstagramIcon />
